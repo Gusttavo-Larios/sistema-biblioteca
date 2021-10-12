@@ -1,0 +1,33 @@
+<head>
+  <title>Home</title>
+</head>
+<body>
+<h1>Home</h1>
+<form action="cadastrar-livro" method="POST">
+    <label>Titulo</label>
+    <input type="text" name="titulo">
+
+    <label>autor</label>
+    <input type="text" name="autor">
+
+    <label>Editora</label>
+    <input type="text" name="editora">
+
+    <label>Foto</label>
+    <input type="text" name="foto">
+
+    <input type="submit" value="Cadastrar">
+  </form>
+  <h2>Livros Cadastrados</h2>
+  {{#livrosCadastrados}}
+    <fieldset>
+      Titulo: {{titulo}}<br>
+      Autor: {{autor}}<br>
+      Editora: {{editora}}<br>
+      foto: {{foto}}<br>
+    </fieldset>
+  {{/livrosCadastrados}}
+  {{^livrosCadastrados}}
+  {{/livrosCadastrados}}
+</body>
+</html>
